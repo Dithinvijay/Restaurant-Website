@@ -12,3 +12,6 @@
 <h3>Technologies Used</h3>
 <p><b>HTML/CSS: </b>For building the structure and styling the website.</p>
 <p><b>JavaScript: </b>For interactive elements such as reservation forms and image galleries.</p>
+
+<h3>Installation and Setup</h3>
+<p>1. Clone the repository to your local machine:</p>
