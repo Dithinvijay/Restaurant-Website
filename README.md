@@ -18,4 +18,6 @@
 <p><a href="https://github.com/Dithinvijay/Restaurant-Website.git">https://github.com/Dithinvijay/Restaurant-Website.git</a></p>
 <p>2. Open the "index.html" file in your web browser to view the website locally.</p>
 
+![image](https://github.com/Dithinvijay/Restaurant-Website/assets/123413489/76e7605f-08f2-4c84-98f1-9371cda45f6b)
+
 <h1 align="center">Thank You</h1>
