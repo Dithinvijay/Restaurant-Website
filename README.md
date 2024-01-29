@@ -17,3 +17,5 @@
 <p>1. Clone the repository to your local machine:</p>
 <p><a href="https://github.com/Dithinvijay/Restaurant-Website.git">https://github.com/Dithinvijay/Restaurant-Website.git</a></p>
 <p>2. Open the "index.html" file in your web browser to view the website locally.</p>
+
+<h1>Thank You</h1>
