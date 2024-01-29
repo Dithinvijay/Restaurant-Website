@@ -5,13 +5,6 @@
 <p><b>Menu Display</b></p>
 <li>
 <ul>
-Dosa			- 50
-Idly				- 40
-Puri			- 60
-Bread Omlette   - 40
-Upma 			- 55
-Vada 			- 30
-Parota 			- 40
-Lemon Rice 	- 70
+Dosa			      - 50
 </ul>
 </li>
