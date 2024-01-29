@@ -4,4 +4,7 @@
 <b><h3>Features</h3></b>
 <p><b>Menu Display</b></p>
 
-![1](https://github.com/Dithinvijay/Restaurant-Website/assets/123413489/a476f87c-44b1-46ed-98e6-70713bc1773a)
+![image](https://github.com/Dithinvijay/Restaurant-Website/assets/123413489/a080d04a-53b6-44bf-84b1-19beaa8ee75b)
+![image](https://github.com/Dithinvijay/Restaurant-Website/assets/123413489/97792cc0-1bfb-4c2b-b493-09b9cf9e1972)
+![image](https://github.com/Dithinvijay/Restaurant-Website/assets/123413489/b689f289-15b3-44fd-bf12-bd6830494102)
+![image](https://github.com/Dithinvijay/Restaurant-Website/assets/123413489/8e5fa84f-7a61-400e-b7ff-74a66ab7ac7b)
