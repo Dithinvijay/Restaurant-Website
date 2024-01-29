@@ -1,4 +1,4 @@
-<b><h1>Restaurant-Website</h1></b>
+<b><h1>Restaurant_Website</h1></b>
 <b><h3>Overview</h3></b>
 <p>This repository contains the source code for a restaurant website. The website is designed to showcase the restaurant's menu, location, contact information, and other relevant details.</p>
 <b><h3>Features</h3></b>
@@ -8,3 +8,7 @@
 ![image](https://github.com/Dithinvijay/Restaurant-Website/assets/123413489/97792cc0-1bfb-4c2b-b493-09b9cf9e1972)
 ![image](https://github.com/Dithinvijay/Restaurant-Website/assets/123413489/b689f289-15b3-44fd-bf12-bd6830494102)
 ![image](https://github.com/Dithinvijay/Restaurant-Website/assets/123413489/8e5fa84f-7a61-400e-b7ff-74a66ab7ac7b)
+
+<h3>Technologies Used</h3>
+<p><b>HTML/CSS: </b>For building the structure and styling the website.</p>
+<p><b>JavaScript: </b>For interactive elements such as reservation forms and image galleries.</p>
