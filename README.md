@@ -4,12 +4,12 @@
 <b><h3>Features</h3></b>
 <p><b>Menu Display</b></p>
 <ul>
-<li>Dosa			      - 50</li>
-<li>Idly		        - 40</li>
-<li>Puri			      - 60</li>
-<li>Bread Omlette   - 40</li>
-<li>Upma 			      - 55</li>
-<li>Vada 			      - 30</li>
-<li>Parota 			    - 40</li>
-<li>Lemon Rice 	    - 70</li>
+<li>Dosa - 50</li>
+<li>Idly - 40</li>
+<li>Puri - 60</li>
+<li>Bread Omlette - 40</li>
+<li>Upma - 55</li>
+<li>Vada - 30</li>
+<li>Parota - 40</li>
+<li>Lemon Rice - 70</li>
 </ul>
