@@ -3,4 +3,15 @@
 <p>This repository contains the source code for a restaurant website. The website is designed to showcase the restaurant's menu, location, contact information, and other relevant details.</p>
 <b><h3>Features</h3></b>
 <p><b>Menu Display</b></p>
-<li></li>
+<li>
+<ul>
+Dosa			- 50
+Idly				- 40
+Puri			- 60
+Bread Omlette   - 40
+Upma 			- 55
+Vada 			- 30
+Parota 			- 40
+Lemon Rice 	- 70
+</ul>
+</li>
