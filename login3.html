@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="login3.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+
+</head>
+
+<body>
+
+	
+	
+	<h2>Login/Signup </h2>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form name="registration+" onsubmit="return ch();">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="https://www.facebook.com/" class="fa fa-facebook-f" style="padding-left:12px; color:#3B5998 ;font-size: 27px;"></a>
+				<a href="https://www.google.co.in/"><span class='bi bi-google' style='color: crimson;font-size: 27px; padding-left: 4px;'></span></a>
+                <a href="https://in.linkedin.com/"><i class="bi-linkedin" style="font-size:27px; padding-left: 5px; color:#007bb5 ;"></i></a>
+</svg>
+			</div>
+			<span>or use your email for registration</span>
+			<input type="text" placeholder="Name" name="three" id="three" />
+			<input type="email" placeholder="Email" name="email" id="two" />
+			<input type="password" placeholder="Password" name="password" id="one" />
+			<a href="index2.html"><button>Sign Up</button></a>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form name="registration" onsubmit="return check();">
+			<h1>Login</h1>
+			<div class="social-container">
+				<a href="#" class="fa fa-facebook-f"style="padding-left: 12px; color:#3B5998; font-size:27px;"></a>
+			<a href="#"><span class='bi bi-google' style='color: crimson;font-size: 27px;padding-left: 4px;'></span></a>
+				<a href="#"><i class="bi-linkedin" style="font-size:27px;padding-left: 5px; color: #007bb5;"></i></a>
+			</div>
+			<span>or use your account</span>
+			<input type="email" name="email" placeholder="Email"  id="two"/>
+			<input type="password" name="Password" placeholder="Password" id="one" />
+			<a href="#">Forgot your password?</a>
+			<a href="index2.html"><button>login</button></a>
+		</form>
+
+		<script type="text/javascript">
+			function check()
+			{
+				let  x=document.getElementById("two").value;
+
+				if(x==""){
+					alert("enter mail");
+					return false;
+				}
+
+	 			let y=document.getElementById("one").value;
+
+	  				 if(y == ""){
+					alert("enter password");
+					return false;
+				}
+
+				 else{
+				 	window.open("index2.html");
+
+				 }
+
+			}
+
+		</script>
+		<script type="text/javascript">
+			function ch(){
+
+		let z=document.getElementById("three").value;
+             if(z=="")
+                  {
+	         alert("enter name");
+	          return false;
+                  }
+		let  x=document.getElementById("two").value;
+
+				if(x=="")
+				{
+					alert("enter mail");
+					return false;
+				}
+	 let y=document.getElementById("one").value;
+
+	  				 if(y == "")
+	  		   {
+					alert("enter password");
+					return false;
+				}
+
+			else{
+					window.open("index2.html");
+
+		 	}
+
+		    }
+
+		
+		</script>
+
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<a href="#"><button class="ghost" id="signIn">Login</button></a>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<a href="#"><button class="ghost" id="signUp">Sign Up</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,772 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Restaurant</title>
+
+      <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+      <!-- font awesome cdn link  -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+      <!-- custom css file link  -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="shortcut icon" href="images/favi.png" type="image/x-icon">
+      <script src="jaasc.js"></script>
+  </head>
+
+  <!-- <style>
+
+
+  .frm{
+  color:#101009;
+  font-size:18px;
+  }
+  label{
+  color:#000;
+  }
+  aside{
+    max-width:700px;
+      margin:auto;
+    }
+    .survey-hr{
+    margin:30px 0;
+      border: .5px solid #ddd;
+    }
+    .star-rating {
+      margin: 25px 0 0px;
+      font-size: 0;
+      white-space: nowrap;
+      display: inline-block;
+      width: 175px;
+      height: 35px;
+      overflow: hidden;
+      position: relative;
+      background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjREREREREIiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
+      background-size: contain;
+    }
+    .star-rating i {
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 20%;
+      z-index: 1;
+      background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRkZERjg4IiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
+      background-size: contain;
+    }
+    .star-rating input {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      opacity: 0;
+      display: inline-block;
+      width: 20%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      z-index: 2;
+      position: relative;
+    }
+    .star-rating input:hover + i,
+    .star-rating input:checked + i {
+      opacity: 1;
+    }
+    .star-rating i ~ i {
+      width: 40%;
+    }
+    .star-rating i ~ i ~ i {
+      width: 60%;
+    }
+    .star-rating i ~ i ~ i ~ i {
+      width: 80%;
+    }
+    .star-rating i ~ i ~ i ~ i ~ i {
+      width: 100%;
+    }
+    .choice {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      padding: 20px;
+      display: block;
+    }
+    span.scale-rating{
+    margin: 5px 0 15px;
+        display: inline-block;
+      
+        width: 100%;
+      
+    }
+    span.scale-rating>label {
+      position:relative;
+        -webkit-appearance: none;
+      outline:0 !important;
+        border: 1px solid grey;
+        height:33px;
+        margin: 0 5px 0 0;
+      width: calc(10% - 7px);
+        float: left;
+      cursor:pointer;
+    }
+    span.scale-rating label {
+      position:relative;
+        -webkit-appearance: none;
+      outline:0 !important;
+        height:33px;
+        margin: 0 5px 0 0;
+      width: calc(10% - 7px);
+        float: left;
+      cursor:pointer;
+    }
+    span.scale-rating input[type=radio] {
+      position:absolute;
+        -webkit-appearance: none;
+      opacity:0;
+      outline:0 !important;
+        /*border-right: 1px solid grey;*/
+        height:33px;
+        margin: 0 5px 0 0;
+      
+      width: 100%;
+        float: left;
+      cursor:pointer;
+      z-index:3;
+    }
+    span.scale-rating label:hover{
+    background:#fddf8d;
+    }
+    span.scale-rating input[type=radio]:last-child{
+    border-right:0;
+    }
+    span.scale-rating label input[type=radio]:checked ~ label{
+        -webkit-appearance: none;
+    
+        margin: 0;
+      background:#fddf8d;
+    }
+    span.scale-rating label:before
+    {
+      content:attr(value);
+        top: 7px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        vertical-align: middle;
+      z-index:2;
+    }
+    
+  </style> -->
+  <style>
+    #feedback {
+      max-width: 60%;
+      width: 100%;
+      margin: 10px auto;
+      padding: 20px;
+      border: solid 1px #f1f1f1;
+      background: #fbfbfb;
+      box-shadow: #e6e6e6 0 0 4px ;
+      border-radius: 0.25rem;
+      z-index: 1;
+    }
+    
+    @media (max-width: 720px) {
+      #feedback{
+        max-width: 90%;
+      }
+    }
+    
+    @media (max-width: 500px) {
+      #feedback{
+        padding: 10px;
+      }
+    }
+    
+    #fh2{
+    padding: 2px 15px;
+    color: #ff4d4d;
+    text-align: center;
+    
+    
+    }
+    
+    @media (max-width: 400px) {
+      #fh2{
+        font-size: 20px;
+      }
+    }
+    
+    
+    #fh6 {
+    padding: 2px 15px;
+    color: #4d0;
+    text-align: center;
+    font-weight: normal;
+    }
+    
+    @media (max-width: 400px) {
+      #fh6{
+        font-size: 12px;
+      }
+    }
+    
+    .pinfo {
+    margin: 8px auto;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #0d0d0d;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+      
+    .form-control {
+      display: block;
+      width: 100%;
+      padding: 0.5rem 0.75rem;
+      font-size: 1rem;
+      line-height: 1.25;
+      font-weight: bold;
+      color: #6C6262;
+      height: 40px;
+      background-color: #fff;
+      background-image: none;
+      -webkit-background-clip: padding-box;
+              background-clip: padding-box;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 0.25rem;
+      -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+      transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+      -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+    }
+    
+    .form-control::-ms-expand {
+      background-color: transparent;
+      border: 0;
+    }
+    
+    .form-control:focus {
+      color: #696060;
+      background-color: #fff;
+      border-color: #5cb3fd;
+      outline: none;
+    }
+    
+    .form-control::-webkit-input-placeholder {
+      color: #F34949;
+      opacity: 1;
+    }
+    
+    .form-control::-moz-placeholder {
+      color: brown;
+      opacity: 1;
+    }
+    
+    .form-control:-ms-input-placeholder {
+      color: blue;
+      opacity: 1;
+    }
+    
+    .form-control::placeholder {
+      color: white;
+      opacity: 1;
+    }
+    
+    .form-control:disabled, .form-control[readonly] {
+      background-color: red;
+      opacity: 1;
+    }
+    
+    .form-control:disabled {
+      cursor: not-allowed;
+    }
+    
+    select.form-control:not([size]):not([multiple]) {
+      height: calc(2.25rem + 2px);
+    }
+    
+    select.form-control:focus::-ms-value {
+      color: green;
+      background-color: #fff;
+    }
+    
+    .form-control-file,
+    .form-control-range {
+      display: block;
+    }
+    
+    .input-group {
+      position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+    }
+    
+    .input-group .form-control {
+      position: relative;
+      z-index: 2;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+              flex: 1 1 auto;
+      width: 1%;
+      margin-bottom: 0;
+    }
+    
+    .input-group .form-control:focus, .input-group .form-control:active, .input-group .form-control:hover {
+      z-index: 3;
+    }
+    
+    .input-group-addon,
+    .input-group-btn,
+    .input-group .form-control {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+    
+    .input-group-addon:not(:first-child):not(:last-child),
+    .input-group-btn:not(:first-child):not(:last-child),
+    .input-group .form-control:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+    
+    .input-group-addon,
+    .input-group-btn {
+      white-space: nowrap;
+      vertical-align: middle;
+    }
+    
+    .input-group-addon {
+      width: 45px;
+      padding: 0.5rem 0.75rem;
+      margin-bottom: 0;
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 1.25;
+      color: #2e2e2e;
+      text-align: center;
+      background-color: #eceeef;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 0.25rem;
+    }
+    
+    .input-group-addon.form-control-sm,
+    .input-group-sm > .input-group-addon,
+    .input-group-sm > .input-group-btn > .input-group-addon.btn {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.875rem;
+      border-radius: 0.2rem;
+    }
+    
+    .input-group-addon.form-control-lg,
+    .input-group-lg > .input-group-addon,
+    .input-group-lg > .input-group-btn > .input-group-addon.btn {
+      padding: 0.75rem 1.5rem;
+      font-size: 1.25rem;
+      border-radius: 0.3rem;
+    }
+    
+    .input-group-addon input[type="radio"],
+    .input-group-addon input[type="checkbox"] {
+      margin-top: 0;
+    }
+    
+    .input-group .form-control:not(:last-child),
+    .input-group-addon:not(:last-child),
+    .input-group-btn:not(:last-child) > .btn,
+    .input-group-btn:not(:last-child) > .btn-group > .btn,
+    .input-group-btn:not(:last-child) > .dropdown-toggle,
+    .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
+    .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+    
+    .input-group-addon:not(:last-child) {
+      border-right: 0;
+    }
+    
+    .input-group .form-control:not(:first-child),
+    .input-group-addon:not(:first-child),
+    .input-group-btn:not(:first-child) > .btn,
+    .input-group-btn:not(:first-child) > .btn-group > .btn,
+    .input-group-btn:not(:first-child) > .dropdown-toggle,
+    .input-group-btn:not(:last-child) > .btn:not(:first-child),
+    .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+    
+    .form-control + .input-group-addon:not(:first-child) {
+      border-left: 0;
+    }
+    
+    .btn {
+      display: inline-block;
+      font-weight: normal;
+      line-height: 1.25;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      -webkit-user-select: none;
+        -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      border: 1px solid transparent;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border-radius: 0.25rem;
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+    
+    .btn:focus, .btn:hover {
+      text-decoration: none;
+    }
+    
+    .btn:focus, .btn.focus {
+      outline: 0;
+      -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.25);
+              box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.25);
+    }
+    
+    .btn.disabled, .btn:disabled {
+      cursor: not-allowed;
+      opacity: .65;
+    }
+    
+    .btn:active, .btn.active {
+      background-image: none;
+    }
+    
+    a.btn.disabled,
+    fieldset[disabled] a.btn {
+      pointer-events: none;
+    }
+    
+    .btn-primary {
+      color: #fff;
+      background-color: #0275d8;
+      border-color: #0275d8;
+    }
+    
+    .btn-primary:hover {
+      color: #fff;
+      background-color: #025aa5;
+      border-color: #01549b;
+    }
+    
+    .btn-primary:focus, .btn-primary.focus {
+      -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
+              box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
+    }
+    
+    .btn-primary.disabled, .btn-primary:disabled {
+      background-color: #0275d8;
+      border-color: #0275d8;
+    }
+    
+    .btn-primary:active, .btn-primary.active,
+    .show > .btn-primary.dropdown-toggle {
+      color: #fff;
+      background-color: #025aa5;
+      background-image: none;
+      border-color: #01549b;
+    }
+    
+  </style>
+
+  <!-- header section starts      -->
+  <header >
+
+      <a href="index2.html" class="logo"><img src="images/Rambo-logos_transparent.png" alt="" style="height: 45px;"></a>
+
+      <nav class="navbar">
+          <a href="index2.html">home</a>
+          <a href="#">Gallery</a>
+          <a href="special.html">Special</a>
+          <a href="menu_copy.html">menu</a>
+          <a class="active"  href="#">review</a>
+          <a href="orderpage.html">order</a>
+      </nav>
+
+      <div class="icons">
+          <i class="fas fa-bars " id="menu-bars"></i>
+          <a href="#" class="fas fa-heart icon"></a>
+          <a href="#" class="fas fa-shopping-cart icon"></a>
+          <a href="signup.html"><i class=" fas fa-solid fa-user"></i></a>
+      </div>
+
+  </header>
+  <!-- header section ends-->
+  <center>
+    <div class="loader-wrapper">
+        <img src="images/loader.gif" style="padding-top: 250px;padding-bottom:150px;">
+    </div>
+  </center>
+
+  <!-- slider -->
+  <section>
+      
+  <div class="container">
+    </div>
+    
+    <div class="content section" style="max-width:1000px">
+      <img class="mySlides animate-top" src="images/g-1.jpg" style="width:1050px; height:570px;border-radius:15px;">
+      <img class="mySlides animate-bottom" src="images/g-2.jpg" style="width:1050px; height:570px;border-radius:15px;">
+      <img class="mySlides animate-top" src="IMAGES//g-3.jpg" style="width:1050px; height:570px;border-radius:15px;">
+      <img class="mySlides animate-bottom" src="images/g-4.jpg" style="width:1050px; height:570px;border-radius:15px;">
+    </div>
+    <script src="https://use.fontawesome.com/a6f0361695.js"></script>
+    <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2500);    
+    }
+    </script>
+  </section>
+  <!-- slider ends -->
+
+
+  <form id="feedback" name="feedback" id="feedback" action="" onsubmit="validate()" >
+    <div class="pinfo">Your personal info</div>
+    
+  <div class="form-group">
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+    <input  name="fname" id="fname" placeholder="name" class="form-control input-lg"  type="text">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+      <input name="email" id="email" type="email" class="form-control" placeholder="xxxxxxx@yahoo.com">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+    <input  name="phone" placeholder="123-XXXXXXXX" class="form-control"id="phone"  type="text">
+      </div>
+    </div>
+  </div>
+  <div class="pinfo">How satisfied are you with our service?</div>
+  <div class="form-group">
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-smile"></i></span>
+    <select class="form-control" id="rate">
+        <option value="1star">Very satisfied</option>
+        <option value="2stars">Satisfied</option>
+        <option value="3stars">Good</option>
+        <option value="4stars">Bad</option>
+        <option value="5stars">Very bad</option>
+      </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="pinfo">Rate our overall services.</div>
+    
+
+  <div class="form-group">
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+    <span class="input-group-addon"><i class="fa fa-heart"></i></span>
+    <select class="form-control" id="rate">
+        <option value="1star">1</option>
+        <option value="2stars">2</option>
+        <option value="3stars">3</option>
+        <option value="4stars">4</option>
+        <option value="5stars">5</option>
+      </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="pinfo">Write your feedback.</div>
+    <div class="form-group">
+      <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+          <textarea name="review" class="form-control" id="review" rows="5"></textarea>
+        
+      </div>
+      <div class="feed" name="feed" id="feed" style="color: red ;">*Required </div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" id="sub-btn" >Submit</button>
+
+
+  </form>
+  <!-- review -->
+  <section class="review" id="review">
+
+      <h1 class="heading"> our customers <span>reviews</span> </h1>
+
+      <div class="box-container">
+
+          <div class="box">
+              <img src="images/p-1.jpg" alt="">
+              <h3>john deo</h3>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti delectus, ducimus facere quod ratione vel laboriosam? Est, maxime rem. Itaque.</p>
+          </div>
+          <div class="box">
+              <img src="images/p-2.jpg" alt="">
+              <h3>john deo</h3>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti delectus, ducimus facere quod ratione vel laboriosam? Est, maxime rem. Itaque.</p>
+          </div>
+          <div class="box">
+              <img src="images/p-3.jpg" alt="">
+              <h3>john deo</h3>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti delectus, ducimus facere quod ratione vel laboriosam? Est, maxime rem. Itaque.</p>
+          </div>
+
+      </div>
+
+  </section>
+  <!-- review ends -->
+  <!-- footer  -->
+  <section class="footer" style="padding-left:30px;padding-right:0px">
+      <div class="box-container">
+        <div class="box">
+          <h3>locations</h3>
+          <a href="#"><i class="fas fa-solid fa-arrow-right"></i> India</a>
+          <a href="#"><i class="fas fa-solid fa-arrow-right"></i> Japan</a>
+          <a href="#"><i class="fas fa-solid fa-arrow-right"></i> Russia</a>
+          <a href="#"><i class="fas fa-solid fa-arrow-right"></i> USA</a>
+          <a href="#"><i class="fas fa-solid fa-arrow-right"></i> France</a>
+      </div>
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="mainpage.html"><i class="fas fa-solid fa-arrow-right"></i> Home</a>
+          <a href="gallery.html"><i class="fas fa-solid fa-arrow-right"></i> Gallery</a>
+          <a href="special.html"><i class="fas fa-solid fa-arrow-right"></i> Special</a>
+          <a href="menu_copy.html"><i class="fas fa-solid fa-arrow-right"></i> Menu</a>
+          <a href="review.html"><i class="fas fa-solid fa-arrow-right"></i> Review</a>
+          <a href="orderpage.html"><i class="fas fa-solid fa-arrow-right"></i> Order</a>
+      </div>
+
+      <div class="box">
+          <h3>contact info</h3>
+          <a href="#"><i class="fas fa-solid fa-arrow-right"></i> +123-456-7890</a>
+          <a href="#"><i class="fas fa-solid fa-arrow-right"></i> +111-222-3333</a>
+          <a href="#"><i class="fas fa-solid fa-arrow-right"></i> asdfghjkl@gmail</a>
+          <a href="#"><i class="fas fa-solid fa-arrow-right"></i> zxcvbnm@gmail.com</a>
+          <a href="#"><i class="fas fa-solid fa-arrow-right"></i> TN, india - 123456</a>
+      </div>
+
+      <div class="box">
+          <h3>follow us</h3>
+          <a href="www.facebook.com"><i class="fas fa-solid fa-arrow-right"></i> Facebook</a>
+          <a href="www.twitter.com"><i class="fas fa-solid fa-arrow-right"></i> Twitter</a>
+          <a href="www.instagram.com"><i class="fas fa-solid fa-arrow-right"></i> Instagram</a>
+          <a href="www.gmail.com"><i class="fas fa-solid fa-arrow-right"></i> Gmail</a>
+      </div>
+      </div>
+  </section>
+  <!-- footer ends -->
+  <script>
+    
+    </script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>  
+  <script>  
+      $(window).on('load', function () {  
+      $(".loader-wrapper").delay(1000).fadeOut("slow"); 
+    });  
+  </script> 
+  <script src="https://use.fontawesome.com/a6f0361695.js"></script>
+  <script>
+    function validate(){
+      var i=0;
+      emailId= document.getElementById("email").value;
+      atpos= emailId.indexOf('@');
+      dotpos= emailId.lastIndexOf('.');
+
+      if(window.feedback.fname.value==""){
+        alert("name field is required");
+        i++;
+      }
+      else if(window.feedback.phone.value==""){
+        alert("phone number field is required");
+        i++;
+      }
+      else if(atpos<1||(dotpos-atpos)<2||emailId==""){
+        alert("please enter valid email using @ and .com.");
+        return false;
+    }
+
+
+      if(i==0){
+        document.getElementById("feedback").action="submit.html";
+      }
+      
+
+    }
+
+
+  </script>
+  </html>

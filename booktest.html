@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="images/favi.png" type="image/x-icon">
+</head>
+<style>
+
+    .number {
+        padding: .3em;
+        text-align: center;
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        background-color: seashell;
+        border-radius: 50%;
+    }
+    
+    h1 {
+        text-align: center;
+        margin: 1em;
+        font-size: 2.5em;
+        text-shadow: 2px 2px 3px grey;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        background: rgb(252, 142, 33);
+        margin: 0 auto 2em;
+        border-radius: 1em;
+        padding: 1em 0;
+    }
+    
+    input, 
+    textarea {
+        border: none;
+        padding: .5em;
+        border-radius: .25em;
+    }
+    
+    input:focus,
+    input:hover,
+    textarea:focus,
+    textarea:hover {
+        background: seashell;
+        border-bottom: 2px solid purple;
+        outline: none;
+    }
+    
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-right: .25em;
+        width: 1em;
+        height: 1em;
+    }
+    
+    fieldset {
+        border: none;
+        margin: .5em;
+    }
+    
+    legend {
+
+        font-size: 1.4em;
+        font-weight: bold;
+        padding-bottom: .5em;
+    }
+    
+    label,
+    .button {
+        font-family: 'Baloo Chettan 2', cursive;
+    }
+    
+    .button { 
+        box-shadow: 1px 1px 3px black;
+        border: none;
+        background-color: #DFDBE5;
+        
+        font-size: 1em;
+        align-self: center;
+     padding: .7em;
+        color: black;
+    }
+    
+    .button:hover {
+        cursor: pointer;
+        background-color: orange;
+        color: white;
+    }
+    
+    #name,
+    #mail,
+    #phone,
+    textarea {
+        margin: .5em 0;
+        box-shadow: 1px 1px 2px grey;
+    }
+    
+    .order {
+        display: none;
+        text-align: center;
+    }
+    
+    img {
+            max-width: 100%;
+    }
+    
+</style>
+<script>
+    const submitForm = () => {
+        document.querySelector(".main").style.display="none";
+        document.querySelector(".order").style.display="block";
+    };
+    function validate(){
+        if(document.myform.user_name.value=="")
+        document.getElementById(name-err).innerHTML="Please Enter your name"
+        if(document.myform.user_email.value=="")
+        alert("U left Email as blank")
+        if(document.myform.user_tel.value=="")
+        alert("U  left Phone-number as blank")
+        if(document.myform.pasta.value=="")
+        alert("Not Selected choice.")
+    }
+    
+</script>
+<body>
+    <div class="main">
+        <h1>Place Your Order Here!</h1>
+        <form  name="myform" onsubmit="validate()" action="javascript:void(0);">
+        <fieldset>
+            <legend><div class="number">1</div> Your Info:</legend>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="user_name"><br>
+            <div id="name-err"></div>
+            <label for="mail">Email:</label><br>
+            <input type="email" id="mail" name="user_email"><br>
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="user_tel"><br>
+            <label for="address">Address:</label><br>
+            <textarea></textarea>
+        </fieldset>
+        <fieldset>
+            <legend><div class="number">2</div> Pasta Choice:</legend>
+            <input type="radio" id="spaghetti" name="pasta"><label>Spaghetti</label>
+            <input type="radio" id="penne" name="pasta"><label>Penne</label><br>
+            <input type="checkbox" id="glutenfree" name="glutenfree"><label>Gluten Free?</label>
+        </fieldset>
+        <fieldset>
+            <legend><div class="number">3</div> Filling Choice:</legend>
+            <input type="radio" id="mince" name="filling"><label>Meatless Mince</label>
+            <input type="radio" id="lentils" name="filling"><label>Lentils</label>
+        </fieldset>
+        <fieldset>
+            <legend><div class="number">4</div> Your Sides:</legend>
+            <input type="radio" id="bread" name="side"><label>Garlic Bread</label>
+            <input type="radio" id="nobread" name="side"><label>No Garlic Bread</label><br>
+            <input type="checkbox" id="glutenfree" name="glutenfree"><label>Gluten Free?</label>
+        </fieldset>
+        <fieldset>
+            <legend><div class="number">5</div> Extra Fillings:</legend>
+            <input type="checkbox" id="mushrooms" name="mushrooms"><label>Mushrooms</label><br>
+            <input type="checkbox" id="onions" name="onions"><label>Onions</label></br>
+            <input type="checkbox" id="carrots" name="carrots"><label>Carrots</label></br>
+            <input type="checkbox" id="celery" name="celery"><label>Celery</label></br>
+            <input type="checkbox" id="peas" name="peas"><label>Peas</label></br>
+        </fieldset>
+        <fieldset>
+        <legend><div class="number">6</div> Any Allergies/Special Requests:</legend>
+        <textarea></textarea>
+        </fieldset>
+    <input class="button" type="submit" value="Give me Food!" onclick="submitForm()">
+    </form>
+    </div>
+    <div class="order">
+        <h1>Thanks for your order!</h1>
+        <img src="images/C.gif" style="height:500px ;">
+        <a href="index2.html" style="text-decoration: none;"><center><img src="images/home_back.png" alt="" style="width:35px;height:35px;right:40%;padding-left:50px;top:10%"></center></a>
+    </div>
+
+</body>
+
+</html>

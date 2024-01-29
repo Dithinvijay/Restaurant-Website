@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="shortcut icon" href="images/favi.png" type="image/x-icon">
+<body>
+
+<div class="content section" style="max-width:9000px">
+<center><img src="images/bg-3.jpg" alt="" style="width: 1000px; height:420px; padding-left:50px;padding-right:20px;margin-top:-1%;"></center>
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000);    
+}
+</script>
+
+</body>
+</html>

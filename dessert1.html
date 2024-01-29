@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jaasc.js"></script>
+       
+
+</head>
+<style>
+    img .img{
+          border: 10px solid rgb(233, 114, 66);
+          border-radius: 50px;
+          box-shadow: 5px 10px 18px #888888;
+        }
+ </style>  
+ <script>
+    function showalert(){
+        alert("want to order food?");
+    }
+ </script>
+
+<!-- header section starts      -->
+<header>
+
+    <a href="index2.html" class="logo"><img src="images/Rambo-logos_transparent.png" alt="" style="height: 45px;"></a>
+
+    <nav class="navbar">
+        <a class="active" href="index2.html">home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="special.html">special</a>
+        <a href="menu.html">menu</a>
+        <a href="#review">review</a>
+        <a href="order.html">order</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars " id="menu-bars"></i>
+        <i class="fas fa-search icon" id="search-icon"></i>
+        <a href="#" class="fas fa-heart icon"></a>
+        <a href="#" class="fas fa-shopping-cart icon"></a>
+    </div>
+
+</header>
+<!-- header section ends-->
+
+
+<!-- home section starts  -->
+<section class="home" id="home">
+    <div class="swiper-container home-slider">
+        <div class="swiper-wrapper wrapper">
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>our special dessert dish</span>
+                    <h3>Mandarin Orange Creme Caramel</h3>
+                    <p>This Mandarin Orange Creme Caramel is a luscious orange-scented custard with a lick the spoon sweet and tangy caramel glaze that will delight all of you orange lovers.Sweet mandarins add a delicious perfumed dimension to this satiny smooth, thickly luscious crème caramel. We like to serve them with tangy mandarin segments, wafers for crunch, and perhaps some softly whipped cream.</p>
+                    <a href="booktable.html" class="btn" onclick="showalert()">order now</a>
+                </div>
+                <div class="row">
+                    <div class="column">
+                      <img class="img" src="images/french orange tart.webp" alt="Snow" style="width:400px;height:450px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</html>
+          
