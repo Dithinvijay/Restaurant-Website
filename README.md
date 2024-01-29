@@ -1,3 +1,5 @@
-This was Built using HTML and CSS and JAVA SCRIPT 
-This project is an basic idea of creating a website using some basic concepts of HTML,CSS,JAVA SCRIPT.
-By using this a basic learner can able to know the small concepts that how to create a simple webpage for small projects.
+<h1>Restaurant-Website</h1>
+<b><h3>Overview</h3></b>
+<p>This repository contains the source code for a restaurant website. The website is designed to showcase the restaurant's menu, location, contact information, and other relevant details.</p>
+<b><h3>Features</h3></b>
+<p><b></b></p>
